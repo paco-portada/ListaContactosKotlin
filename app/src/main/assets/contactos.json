@@ -1,0 +1,33 @@
+{ "contactos": [
+  {
+    "nombre": "Penélope Cruz",
+    "direccion": "Calle Los Remedios, Málaga",
+    "email": "penelope@gmail.com",
+    "telefono": {
+      "casa": "952345268",
+      "movil": "621678540",
+      "trabajo": "951194565"
+    }
+  },
+  {
+    "nombre": "Blanca Suárez",
+    "direccion": "Calle Larios, Málaga",
+    "email": "penelope@gmail.com",
+    "telefono": {
+      "casa": "952345268",
+      "movil": "605778587",
+      "trabajo": "951194565"
+    }
+  },
+  {
+    "nombre": "Adriana Ugarte",
+    "direccion": "Calle Hilera, Málaga",
+    "email": "penelope@gmail.com",
+    "telefono": {
+      "casa": "952345268",
+      "movil": "645778562",
+      "trabajo": "951194565"
+    }
+  }
+]
+}
