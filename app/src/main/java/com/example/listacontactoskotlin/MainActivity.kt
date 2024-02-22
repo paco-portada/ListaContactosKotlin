@@ -9,8 +9,11 @@ import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.listacontactoskotlin.Adapter.ContactosAdapter
 import com.example.listacontactoskotlin.Model.Contacto
+import com.example.listacontactoskotlin.Model.Persona
 import com.example.listacontactoskotlin.Util.Analisis.analizarContactos
 import com.example.listacontactoskotlin.databinding.ActivityMainBinding
+import com.google.gson.Gson
+import com.google.gson.JsonSyntaxException
 import org.json.JSONException
 import java.io.IOException
 
@@ -61,8 +64,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     fun obtenerContactos(): ArrayList<Contacto> {
         var contactos: ArrayList<Contacto> = ArrayList()
         lateinit var contenido: String
-        // lateinit var gson: Gson
-        // lateinit var persona: Persona
+        lateinit var gson: Gson
+        lateinit var persona: Persona
 
         try {
             if (!binding.switch1.isChecked) {
@@ -71,18 +74,17 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 contactos = analizarContactos(contenido)
             } else {
                 // usar Gson
-
-
-
-
-
+                contenido = leerAsset(applicationContext, CONTACTS)
+                gson = Gson()
+                persona = gson.fromJson(contenido, Persona::class.java)
+                contactos = persona.contactos as ArrayList<Contacto>
             }
         } catch (e: IOException) {
             Log.e("Error: ", e.message.toString())
             mostrarMensaje("Error: " + e.message.toString())
-        //} catch (e: JsonSyntaxException) {
-        //    Log.e("Error: ", e.message.toString())
-        //    mostrarMensaje("Error: " + e.message.toString())
+        } catch (e: JsonSyntaxException) {
+            Log.e("Error: ", e.message.toString())
+            mostrarMensaje("Error: " + e.message.toString())
         } catch (e: JSONException) {
             //e.printStackTrace();
             Log.e("Error: ", e.message.toString())

@@ -1,0 +1,34 @@
+{
+  "contactos": [
+    {
+      "nombre": "Angelina Jolie",
+      "direccion": "calle los remedios, 29007, malaga",
+      "email": "angie@gmail.com",
+      "telefono": {
+        "casa": "952245407",
+        "movil": "603459530",
+        "trabajo": "951230246"
+      }
+    },
+    {
+      "nombre": "Nikole Kidman",
+      "direccion": "calle hilera, 29010, malaga",
+      "email": "nikole@gmail.com",
+      "telefono": {
+        "casa": "952233407",
+        "movil": "625459540",
+        "trabajo": "951230246"
+      }
+    },
+    {
+      "nombre": "Jennifer Lopez",
+      "direccion": "calle larios, 29002, malaga",
+      "email": "jenny@gmail.com",
+      "telefono": {
+        "casa": "951065407",
+        "movil": "628659550",
+        "trabajo": "952002146"
+      }
+    }
+  ]
+}
